@@ -126,6 +126,9 @@ button{
         height: fit-content;
         min-height: auto;
     }
+    h1{
+        text-align:center;
+    }
     .box_img{
         display: none;
     }
