@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+body{
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrap{
+    display: flex;
+    min-height: 28rem;
+    width: 90%;
+    height: 80%;
+    max-width: 60rem;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+}
+
+.women-mob{
+    display: none;
+}
+
+.Hero-img{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 46rem;
+    background-repeat: no-repeat;
+    background-position: 137% -11.5rem;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.women-comp{
+    position: relative;
+    left: -5.3rem;
+    width:100%;
+}
+
+.box_img{
+    position: absolute;
+    z-index: 2;
+    top: 11.5rem;
+    left: -7rem;
+    width: 20%;
+}
+
+
+.characters{
+    min-width: 30%;
+    width: 26rem;
+}
+
+.box{
+    width: 95%;
+    position: relative;
+}
+button{
+    position: absolute;
+    right: 0;
+    border: 0;
+    background: transparent;
+    transition: 0.5s ease;
+}
+
+.visible{
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    transition: 2s ease;
+}
+
+
+
+.border-bottom{
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+}
+
+
+
+.border-bottom p:nth-child(1),button{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.border-bottom p:nth-child(1):hover{
+    color: hsl(14, 88%, 65%);
+}
+
+
+.move{
+    position: absolute;
+    top: -50rem;
+    left:-3rem;
+}
+
+@media (max-width:1110px){
+    .box_img{
+        left:-6rem
+    }
+}
+
+@media (max-width:900px){
+    .box_img{
+        left:-5rem
+    }
+}
+
+
+@media (max-width:750px){
+    main{
+        margin-top: 25%;
+    }
+    .wrap{
+        flex-direction: column;
+        height: fit-content;
+        min-height: auto;
+    }
+    .box_img{
+        display: none;
+    }
+    .women-comp{
+        display: none;
+    }
+    .women-mob{
+        display: block;
+        width: 80%;
+        transform: translateY(-7rem);
+    }
+    .Hero-img {
+        height: 10.5rem;
+        width: 100%;
+        overflow: visible;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        display: flex;
+        background-position: 49% -0.5rem;
+        justify-content: center;
+        background-size: 80%;
+    }
+
+    .characters{
+        height: 100%;
+        min-height: 24rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .box{
+        width: 80%;
+    }
+}
+
+
+@media (max-width:450px){
+
+    main {
+        margin-top: 54px;
+    }
+    .box .border-bottom:nth-child(6){
+        margin-bottom: 20px;
+    }
+    .wrap{
+        display: block;
+    }
+    .Hero-img{
+        position: relative;
+        height:7rem;
+    }
+    .women-mob{
+        position: absolute;
+        top:-0.4rem;
+    }
+}
+
+
+
+
+@media (max-width:320px){
+
+    .women-mob{
+        top:1.5rem;
+    }
+    .Hero-img{
+        height:4rem;
+    }
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
